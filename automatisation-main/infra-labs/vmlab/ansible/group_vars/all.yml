@@ -1,0 +1,33 @@
+# group_vars/all.yml
+# Variables visible to all nodes
+---
+rhbase_repositories:
+  - epel-release
+rhbase_install_packages:
+  - bash-completion
+  - vim-enhanced
+  - bind-utils
+  - git
+  - nano
+  - tree
+  - wget
+
+
+
+
+mysql_databases: 
+    - name : wordpress
+mysql_users:
+    - name: wordpress
+    - password: Ka73x69mz6EQp6tA
+    - priv : 'wordpress.*:ALL'
+
+
+
+
+rhbase_users:
+  - name: kilian
+    groups:
+      - users
+      - wheel
+    ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDDvwLpNH08TD8bLde0Dv/1+9FtJTSoNdpnGuc+nBGITuHH2xRkvUebYF+s8+7wG/dvNETR5u9qEUy3NMIMzs6eG99R+Pbw4rDLpbv0uDRetIk035r5hK1G+aYq7VduYpplypGeeycjmeRz8tz/QeRuHAaKqATAJDKwklcI4FTqqfAQAb2CgLZ3jW/dXk9RBGxMqO2g0wy/JPsB3OsLxhoDYjxhKyKgjv83V+n01owmM+xgOaqso1wja/9DPeb2BjWV41IsDxkyib3yTfMABxdYXLIKSdjwuKyl3s59LQz4GMY7yczqjjJStybRT3L3hkjdBgtZcLr/VVL3m9B/28Tu1emY+U/Uo7gSL90uInI6H/sMDQAqarCE76AD1ZCbBYx2Fi+5tygTQyXQPLpyawBfFu9QkQJtGQZMGB+pu/q24soAA2SCkgr/CF7wrGPuWMVNVAYzbIJ+35RJbrEL7lUuaFsUPNuxUEq37FifXk5Qk32+Z52M2uZsKv73nQXWE9c= DeNor@LaptopKilian
